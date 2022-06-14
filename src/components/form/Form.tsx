@@ -34,7 +34,7 @@ const Form = () => {
           />
         </div>
         <div className="select">
-          {/* <Select
+          <Select
             label="Delivery methods"
             name="Select method"
             data-testid="methods-input"
@@ -42,7 +42,7 @@ const Form = () => {
             <Item>First</Item>
             <Item>Second</Item>
             <Item>Three</Item>
-          </Select> */}
+          </Select>
         </div>
         {errors.methods && <span>This field is required</span>}
         <div className="formGroup">

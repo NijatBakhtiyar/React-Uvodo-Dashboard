@@ -47,6 +47,8 @@ export const FormCss = styled("div", {
     },
 
     ".select": {
+      position: "relative",
+
       div: {
         width: "100%",
         lineHeight: "24px",

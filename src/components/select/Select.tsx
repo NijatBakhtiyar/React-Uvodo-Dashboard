@@ -1,6 +1,6 @@
-import React from "react";
+import React, { FC } from "react";
 import { useSelectState } from "@react-stately/select";
-import { useSelect, HiddenSelect } from "@react-aria/select";
+import { useSelect, HiddenSelect, AriaSelectOptions } from "@react-aria/select";
 import { useListBox, useOption } from "@react-aria/listbox";
 import { mergeProps } from "@react-aria/utils";
 import { useButton } from "@react-aria/button";
@@ -9,12 +9,23 @@ import { FocusScope } from "@react-aria/focus";
 import { useOverlay, DismissButton } from "@react-aria/overlays";
 import Arrow from "../../images/png/Arrow.png";
 
-function Select(props) {
+interface SelectOption {
+  name: string;
+  value: string;
+}
+
+type SelectProps = AriaSelectOptions<SelectOption> & {
+  options?: SelectOption[];
+  label?: string;
+  name?: string;
+};
+
+const Select: FC<SelectProps & React.HTMLProps<HTMLDivElement>> = (props) => {
   // Create state based on the incoming props
   const state = useSelectState(props);
 
   // Get props for child elements from useSelect
-  const ref = React.useRef();
+  const ref = React.useRef<HTMLButtonElement>(null);
   const { labelProps, triggerProps, valueProps, menuProps } = useSelect(
     props,
     state,
@@ -60,12 +71,17 @@ function Select(props) {
       )}
     </div>
   );
-}
+};
 
 export default Select;
 
-function ListBoxPopup({ state, ...otherProps }) {
-  const ref = React.useRef();
+interface OptionProps {
+  item: any;
+  state: any;
+}
+
+function ListBoxPopup({ state, ...otherProps }: any) {
+  const ref = React.useRef<HTMLDivElement>(null);
 
   // Get props for the listbox
   const { listBoxProps } = useListBox(
@@ -80,7 +96,7 @@ function ListBoxPopup({ state, ...otherProps }) {
 
   // Handle events that should cause the popup to close,
   // e.g. blur, clicking outside, or pressing the escape key.
-  const overlayRef = React.useRef();
+  const overlayRef = React.useRef<HTMLDivElement>(null);
   const { overlayProps } = useOverlay(
     {
       onClose: () => state.close(),
@@ -129,9 +145,9 @@ function ListBoxPopup({ state, ...otherProps }) {
   );
 }
 
-function Option({ item, state }) {
+function Option({ item, state }: OptionProps) {
   // Get props for the option element
-  const ref = React.useRef();
+  const ref = React.useRef<HTMLLIElement>(null);
   const isDisabled = state.disabledKeys.has(item.key);
   const isSelected = state.selectionManager.isSelected(item.key);
   const { optionProps } = useOption(
