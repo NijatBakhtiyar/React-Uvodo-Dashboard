@@ -13,9 +13,6 @@ npm start
 ```
 npm run test
 ```
-
-## 🔗 [**Live Demo**](https://react-uvodo-dashboard.netlify.app/settings/payment)
-
 ## Used technologies:
 
 **UI:** [**Story Book**](https://storybook.js.org/), [**Stitches**](https://stitches.dev/),[**React-Aria**](https://react-spectrum.adobe.com/react-aria/), 
@@ -24,8 +21,7 @@ npm run test
 
 **Routing:** [**React Location**](https://react-location.tanstack.com/)
 
-
-**Build Tool:** [**Vite**](https://vitejs.dev/), [**Netlify**](https://app.netlify.com/)
+**Build Tool:** [**Vite**](https://vitejs.dev/)
 
 **Form Management:** [**React Hook Form**](https://react-hook-form.com/)
 
