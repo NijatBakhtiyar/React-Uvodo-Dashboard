@@ -1,6 +1,6 @@
 import { styled } from "@stitches/react";
 
-export const Form = styled("div", {
+export const FormCss = styled("div", {
   maxWidth: "500px",
   width: "100%",
 
@@ -16,6 +16,7 @@ export const Form = styled("div", {
 
       label: {
         fontSize: "14px",
+        lineHeight: "24px",
       },
 
       input: {

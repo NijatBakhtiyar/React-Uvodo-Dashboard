@@ -1,13 +1,13 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import Button from "../button/Button";
-import { Form } from "./UseFormStyle";
+import { FormCss } from "./FormStyle";
 type Inputs = {
   name: string;
   methods: string;
   intructions: string;
 };
 
-const UseForm = () => {
+const Form = () => {
   const {
     register,
     handleSubmit,
@@ -20,13 +20,14 @@ const UseForm = () => {
   };
 
   return (
-    <Form>
+    <FormCss>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="formGroup">
           <label>Name</label>
           <input
             defaultValue="Cash on delivery (COD)"
             {...register("name")}
+            data-testid="name-input"
           />
         </div>
 
@@ -42,6 +43,7 @@ const UseForm = () => {
             {...register("intructions")}
             cols={10}
             rows={6}
+            data-testid="intructions-input"
           />
         </div>
 
@@ -51,8 +53,8 @@ const UseForm = () => {
           </Button>
         </div>
       </form>
-    </Form>
+    </FormCss>
   );
 };
 
-export default UseForm;
+export default Form;

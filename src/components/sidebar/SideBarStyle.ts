@@ -26,25 +26,21 @@ export const SideBar = styled("div", {
     },
 
     a: {
-      borderRadius: "4px",
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-
-      padding: "4px 12px",
-      fontWeight: "600",
       color: "#000",
-
-      "&:active": {
-        color: "inherit",
-      },
+      borderRadius: "4px",
+      margin: 0,
+      padding: "4px 12px",
+      height: "40px",
 
       p: {
-        margin: 0,
         display: "flex",
         alignItems: "center",
-        color: "inherit",
         gap: "5px",
+        fontWeight: "600",
+        margin: 0,
       },
 
       span: {
@@ -54,9 +50,15 @@ export const SideBar = styled("div", {
         padding: "10px",
         borderRadius: "50%",
         backgroundColor: "#EAEAEA",
+      },
 
-        "&.active": {
-          backgroundColor: "transparent",
+      "&.active": {
+        color: "#fff",
+        backgroundColor: "#000",
+
+        span: {
+          backgroundColor: "unset",
+          color: "#fff",
         },
       },
     },
@@ -72,11 +74,6 @@ export const SideBar = styled("div", {
       cursor: "pointer",
       border: "none",
       backgroundColor: "transparent",
-
-      "&:focus": {
-        color: "#fff",
-        backgroundColor: "black",
-      },
     },
   },
 

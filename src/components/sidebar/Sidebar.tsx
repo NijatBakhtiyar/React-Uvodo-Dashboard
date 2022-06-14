@@ -13,16 +13,6 @@ import UserIcon from "../../images/png/UserIcon.png";
 const Sidebar = () => {
   const [active, setActive] = useState<string>("");
 
-  function getActiveProps(text: string) {
-    setActive(text);
-    return {
-      style: {
-        color: "#fff",
-        backgroundColor: "black",
-      },
-    };
-  }
-
   return (
     <SideBar>
       <div className="topBar">
@@ -31,68 +21,69 @@ const Sidebar = () => {
         </h1>
         <Link
           to="/"
-          getActiveProps={() => getActiveProps("dashboard")}
           activeOptions={{ exact: true }}
         >
-          <p>
-            <HouseIcon
-              params={{ color: active === "dashboard" ? "#fff" : "" }}
-            />
-            Dashboard
-          </p>
-        </Link>{" "}
-        <Link
-          to="/products"
-          getActiveProps={() => getActiveProps("products")}
-        >
-          <p>
-            {" "}
-            <ProductIcon
-              params={{ color: active === "products" ? "#fff" : "" }}
-            />
-            Products
-          </p>
+          {({ isActive }) => {
+            return (
+              <p className={isActive ? "active" : ""}>
+                <HouseIcon params={{ color: isActive ? "#fff" : "" }} />
+                Dashboard
+              </p>
+            );
+          }}
         </Link>
-        <Link
-          to="/orders"
-          getActiveProps={() => getActiveProps("orders")}
-        >
-          <p>
-            <OrderIcon params={{ color: active === "orders" ? "#fff" : "" }} />
-            Orders
-          </p>
-          <span className={active === "orders" ? "active" : ""}>23</span>
+        <Link to="/products">
+          {({ isActive }) => {
+            return (
+              <p className={isActive ? "active" : ""}>
+                <ProductIcon params={{ color: isActive ? "#fff" : "" }} />
+                Products
+              </p>
+            );
+          }}
         </Link>
-        <Link
-          to="/customers"
-          getActiveProps={() => getActiveProps("customers")}
-        >
-          <p>
-            <CustomersIcon
-              params={{ color: active === "customers" ? "#fff" : "" }}
-            />
-            Customers
-          </p>
+        <Link to="/orders">
+          {({ isActive }) => {
+            return (
+              <>
+                <p className={isActive ? "active" : ""}>
+                  <OrderIcon params={{ color: isActive ? "#fff" : "" }} />
+                  Orders
+                </p>
+                <span className={active ? "active" : ""}>23</span>
+              </>
+            );
+          }}
         </Link>
-        <Link
-          to="/design"
-          getActiveProps={() => getActiveProps("design")}
-        >
-          <p>
-            <DesingIcon params={{ color: active === "design" ? "#fff" : "" }} />
-            Design
-          </p>
+        <Link to="/customers">
+          {({ isActive }) => {
+            return (
+              <p className={isActive ? "active" : ""}>
+                <CustomersIcon params={{ color: isActive ? "#fff" : "" }} />
+                Customers
+              </p>
+            );
+          }}
         </Link>
-        <Link
-          to="/settings"
-          getActiveProps={() => getActiveProps("settings")}
-        >
-          <p>
-            <HouseIcon
-              params={{ color: active === "settings" ? "#fff" : "" }}
-            />{" "}
-            Settings
-          </p>
+        <Link to="/design">
+          {({ isActive }) => {
+            return (
+              <p className={isActive ? "active" : ""}>
+                <DesingIcon params={{ color: isActive ? "#fff" : "" }} />
+                Desing
+              </p>
+            );
+          }}
+        </Link>
+        <Link to="/settings">
+          {({ isActive }) => {
+            return (
+              <p className={isActive ? "active" : ""}>
+                <HouseIcon params={{ color: isActive ? "#fff" : "" }} />
+                Settings
+              </p>
+            );
+          }}
         </Link>
         <button>
           <LogoutIcon /> Logout
