@@ -19,14 +19,9 @@ const UseForm = () => {
     reset();
   };
 
-  // console.log(watch("example")); // watch input value by passing the name of it
-
   return (
-    /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <Form>
-      {" "}
       <form onSubmit={handleSubmit(onSubmit)}>
-        {/* register your input into the hook by invoking the "register" function */}
         <div className="formGroup">
           <label>Name</label>
           <input
@@ -35,7 +30,6 @@ const UseForm = () => {
           />
         </div>
 
-        {/* include validation with required or other standard HTML validation rules */}
         <div className="formGroup">
           <label>Delivery methods</label>
           <input {...register("methods", { required: true })} />

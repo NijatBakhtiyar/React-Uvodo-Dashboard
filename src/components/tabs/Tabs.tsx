@@ -1,6 +1,3 @@
-// import { Item } from "@react-stately/collections";
-// import { useTab, useTabList, useTabPanel } from "@react-aria/tabs";
-// import { useTabListState } from "@react-stately/tabs";
 import React from "react";
 import { Tab, TabList, TabPanel, Wrapper } from "react-aria-tabpanel";
 import UseForm from "../form/UseForm";
@@ -23,13 +20,13 @@ function Tabs() {
         <TabList>
           <TabPanel
             tabId="1"
-            tabindex="0"
+            tabIndex="0"
           >
             <div>General</div>
           </TabPanel>
           <TabPanel
             tabId="2"
-            tabindex="0"
+            tabIndex="0"
           >
             <div>
               <div>Account</div>
@@ -37,7 +34,7 @@ function Tabs() {
           </TabPanel>
           <TabPanel
             tabId="3"
-            tabindex="0"
+            tabIndex="0"
           >
             <div className="payment">
               <div className="title">
@@ -49,7 +46,7 @@ function Tabs() {
           </TabPanel>
           <TabPanel
             tabId="4"
-            tabindex="0"
+            tabIndex="0"
           >
             <div>
               <div>Shipping</div>
@@ -57,7 +54,7 @@ function Tabs() {
           </TabPanel>
           <TabPanel
             tabId="5"
-            tabindex="0"
+            tabIndex="0"
           >
             <div>
               <div>Taxes</div>
@@ -65,7 +62,7 @@ function Tabs() {
           </TabPanel>
           <TabPanel
             tabId="6"
-            tabindex="0"
+            tabIndex="0"
           >
             <div>
               <div>Social Profiles</div>
@@ -73,7 +70,7 @@ function Tabs() {
           </TabPanel>
           <TabPanel
             tabId="7"
-            tabindex="0"
+            tabIndex="0"
           >
             <div>
               <div>Legal</div>
@@ -81,7 +78,7 @@ function Tabs() {
           </TabPanel>
           <TabPanel
             tabId="8"
-            tabindex="0"
+            tabIndex="0"
           >
             <div>
               <div>Password</div>
