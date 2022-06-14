@@ -32,6 +32,11 @@ export const Global = globalCss({
     listStyle: "none",
     fontFamily: "Inter",
   },
+
+  "*": {
+    outline: "none",
+  },
+
   a: {
     textDecoration: "none",
   },

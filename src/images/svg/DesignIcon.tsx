@@ -5,7 +5,7 @@ type Params = {
     color?: string;
   };
 };
-const DesingIcon = ({ params }: Params) => {
+const DesignIcon = ({ params }: Params) => {
   return (
     <svg
       width="24"
@@ -52,4 +52,4 @@ const DesingIcon = ({ params }: Params) => {
   );
 };
 
-export default DesingIcon;
+export default DesignIcon;

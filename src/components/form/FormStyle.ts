@@ -45,5 +45,30 @@ export const FormCss = styled("div", {
         border: "1px solid #624CE0",
       },
     },
+
+    ".select": {
+      div: {
+        width: "100%",
+        lineHeight: "24px",
+      },
+
+      button: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        width: "100%",
+        cursor: "pointer",
+        padding: "8px 16px",
+        backgroundColor: "unset",
+        border: "1px solid #c7c7c7",
+        borderRadius: "4px",
+      },
+
+      ul: {
+        backgroundColor: "#f6f6f6 !important",
+        border: "1px solid #c7c7c7",
+        borderRadius: "4px",
+      },
+    },
   },
 });

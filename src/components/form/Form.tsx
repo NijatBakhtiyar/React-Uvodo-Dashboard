@@ -1,6 +1,9 @@
+import { Item } from "@react-stately/collections";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Button from "../button/Button";
+import Select from "../select/Select";
 import { FormCss } from "./FormStyle";
+
 type Inputs = {
   name: string;
   methods: string;
@@ -30,13 +33,18 @@ const Form = () => {
             data-testid="name-input"
           />
         </div>
-
-        <div className="formGroup">
-          <label>Delivery methods</label>
-          <input {...register("methods", { required: true })} />
+        <div className="select">
+          <Select
+            label="Delivery methods"
+            name="Select method"
+            data-testid="methods-input"
+          >
+            <Item>First</Item>
+            <Item>Second</Item>
+            <Item>Three</Item>
+          </Select>
         </div>
         {errors.methods && <span>This field is required</span>}
-
         <div className="formGroup">
           <label>Payment instruction (Optional)</label>
           <textarea

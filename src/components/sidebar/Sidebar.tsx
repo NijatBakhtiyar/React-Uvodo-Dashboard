@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-location";
 import React, { useState } from "react";
 import CustomersIcon from "../../images/svg/CustomersIcon";
-import DesingIcon from "../../images/svg/DesignIcon";
+import DesignIcon from "../../images/svg/DesignIcon";
 import HouseIcon from "../../images/svg/HouseIcon";
 import LogoIcon from "../../images/svg/LogoIcon";
 import LogoutIcon from "../../images/svg/LogoutIcon";
@@ -69,8 +69,8 @@ const Sidebar = () => {
           {({ isActive }) => {
             return (
               <p className={isActive ? "active" : ""}>
-                <DesingIcon params={{ color: isActive ? "#fff" : "" }} />
-                Desing
+                <DesignIcon params={{ color: isActive ? "#fff" : "" }} />
+                Design
               </p>
             );
           }}

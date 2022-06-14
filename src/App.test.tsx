@@ -24,6 +24,13 @@ it("should render the input", async () => {
   fireEvent.change(inputName, { target: { value: "23" } });
   expect(screen.getByText("23")).toBeInTheDocument();
 
+  // select
+  const Select = screen.getByTestId("methods-input");
+  expect(Select).toBeInTheDocument();
+
+  fireEvent.change(Select, { target: { value: "First" } });
+  expect(screen.getByText("First")).toBeInTheDocument();
+
   // textarea
   const textarea = screen.getByTestId("intructions-input");
   expect(textarea).toBeInTheDocument();

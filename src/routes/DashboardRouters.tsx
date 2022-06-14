@@ -1,7 +1,7 @@
 import { ReactLocation, Router } from "@tanstack/react-location";
 import React from "react";
 import Customers from "../pages/customers/Customers";
-import Desing from "../pages/design/Desing";
+import Design from "../pages/design/Design";
 import GeneralSettings from "../pages/settings/GeneralSettings";
 import Index from "../pages/index/Index";
 import Orders from "../pages/orders/Orders";
@@ -37,7 +37,7 @@ const DashboardRouters = () => {
         },
         {
           path: "/design",
-          element: <Desing />,
+          element: <Design />,
         },
         {
           path: "/settings",
