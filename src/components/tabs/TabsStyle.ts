@@ -28,4 +28,27 @@ export const TabsDesign = styled("div", {
       },
     },
   },
+
+  ".payment": {
+    paddingTop: "32px",
+
+    ".title": {
+      marginBottom: "22px",
+
+      h3: {
+        fontSize: "16px",
+        fontWeight: "600",
+        lineHeight: "32px",
+        margin: 0,
+      },
+
+      p: {
+        color: "#808080",
+        fontSize: "14px",
+        fontWeight: "400",
+        lineHeight: "24px",
+        margin: 0,
+      },
+    },
+  },
 });

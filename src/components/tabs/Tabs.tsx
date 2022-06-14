@@ -3,6 +3,7 @@
 // import { useTabListState } from "@react-stately/tabs";
 import React from "react";
 import { Tab, TabList, TabPanel, Wrapper } from "react-aria-tabpanel";
+import UseForm from "../form/UseForm";
 import { TabsDesign } from "./TabsStyle";
 
 function Tabs() {
@@ -38,8 +39,12 @@ function Tabs() {
             tabId="3"
             tabindex="0"
           >
-            <div>
-              <div>Payment</div>
+            <div className="payment">
+              <div className="title">
+                <h3>Pay on delivery</h3>
+                <p>Add details of how you’ll charge buyers on delivery.</p>
+              </div>
+              <UseForm />
             </div>
           </TabPanel>
           <TabPanel
