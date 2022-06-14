@@ -1,5 +1,5 @@
-import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import Button from "../button/Button";
 import { Form } from "./UseFormStyle";
 type Inputs = {
   name: string;
@@ -15,7 +15,7 @@ const UseForm = () => {
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
+    // console.log(data);
     reset();
   };
 
@@ -40,6 +40,7 @@ const UseForm = () => {
           <label>Delivery methods</label>
           <input {...register("methods", { required: true })} />
         </div>
+        {errors.methods && <span>This field is required</span>}
 
         <div className="formGroup">
           <label>Payment instruction (Optional)</label>
@@ -49,11 +50,11 @@ const UseForm = () => {
             rows={6}
           />
         </div>
-        {/* errors will return when field validation fails  */}
-        {errors.methods && <span>This field is required</span>}
 
         <div className="btn">
-          <button type="submit">Save changes</button>
+          <Button>
+            <span>Save changes </span>
+          </Button>
         </div>
       </form>
     </Form>

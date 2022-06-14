@@ -36,7 +36,7 @@ export const Form = styled("div", {
       padding: "0 !important",
       boxShadow: "unset !important",
 
-      button: {
+      ".button": {
         background: "#624CE0 !important",
         color: "#fff",
         padding: "8px 16px",
