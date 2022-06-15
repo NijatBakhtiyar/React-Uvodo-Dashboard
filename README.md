@@ -13,6 +13,9 @@ npm start
 ```
 npm run test
 ```
+
+## 🔗 [**Live Demo**](https://react-uvodo-dashboard.netlify.app/settings/payment)
+
 ## Used technologies:
 
 **UI:** [**Story Book**](https://storybook.js.org/), [**Stitches**](https://stitches.dev/),[**React-Aria**](https://react-spectrum.adobe.com/react-aria/), 
